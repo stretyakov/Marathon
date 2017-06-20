@@ -34,6 +34,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Locale;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -78,7 +79,7 @@ public class XMLOutputter implements IOutputter {
     private void writeResultXML(String indent, Writer writer, MarathonTestResult result, Test test) throws IOException {
         if (result == null)
             return;
-        String durationStr = NumberFormat.getInstance().format(result.getDuration());
+        String durationStr = NumberFormat.getInstance(Locale.ENGLISH).format(result.getDuration());
         int status = result.getStatus();
         StringBuilder xml = new StringBuilder();
         xml.append(indent);

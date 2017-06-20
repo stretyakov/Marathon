@@ -30,6 +30,7 @@ import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Locale;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -62,7 +63,7 @@ public class TextOutputter implements IOutputter {
             if (result.getStatus() == MarathonTestResult.STATUS_ERROR)
                 totalErrors++;
         }
-        formatter = NumberFormat.getInstance();
+        formatter = NumberFormat.getInstance(Locale.ENGLISH);
         String durationStr = formatter.format(totalDuration);
         StringBuffer buffer = new StringBuffer();
         buffer.append("TestSuite: ").append(testSuite.getName());

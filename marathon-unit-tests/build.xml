@@ -17,6 +17,7 @@
 		<pathelement location="${guice.jar}"/>
 		<pathelement location="${aopalliance.jar}"/>
 		<pathelement location="${inject.jar}"/>
+                <pathelement location="${osxutil.jar}"/>
 	</path>
 
 	<target name='compile' >

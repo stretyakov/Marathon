@@ -11,7 +11,7 @@ h2. Building Marathon
 You need to clone this repository as well update submodule to compile Marathon.
 
 <pre><code>
-$ git clone git://github.com/jalian-systems/Marathon.git
+$ git clone https://github.com/stretyakov/Marathon.git
 $ cd Marathon
 $ git submodule update --init
 $ ant
